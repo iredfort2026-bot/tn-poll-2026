@@ -11,11 +11,11 @@ if not os.path.exists(DATA_FILE):
     df.to_csv(DATA_FILE, index=False)
 
 PARTIES = [
-    {'id': 'DMK', 'name': 'திமுக', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/DMK_logo.svg/512px-DMK_logo.svg.png'},
-    {'id': 'AIADMK', 'name': 'அதிமுக', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AIADMK_logo.svg/512px-AIADMK_logo.svg.png'},
-    {'id': 'TVK', 'name': 'தவெக', 'image': 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Tamilaga_Vettri_Kazhagam_logo.png/220px-Tamilaga_Vettri_Kazhagam_logo.png'},
-    {'id': 'NTK', 'name': 'நாம் தமிழர்', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Naam_Tamilar_Katchi_Logo.png/512px-Naam_Tamilar_Katchi_Logo.png'},
-    {'id': 'BJP', 'name': 'பாஜக', 'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bharatiya_Janata_Party_logo.svg/512px-Bharatiya_Janata_Party_logo.svg.png'}
+    {'id': 'DMK', 'name': 'திமுக', 'image': '/static/dmk.png'},
+    {'id': 'AIADMK', 'name': 'அதிமுக', 'image': '/static/admk.png'},
+    {'id': 'TVK', 'name': 'தவெக', 'image': '/static/tvk.png'},
+    {'id': 'NTK', 'name': 'நாம் தமிழர்', 'image': '/static/ntk.png'},
+    {'id': 'BJP', 'name': 'பாஜக', 'image': '/static/bjp.png'}
 ]
 
 # உங்கள் அழகான UI டிசைன்
@@ -33,6 +33,7 @@ HTML_TEMPLATE = """
         .party-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin: 20px 0; }
         .party-card { border: 1px solid #ddd; padding: 15px; border-radius: 15px; cursor: pointer; }
         .party-card img { width: 80px; height: 80px; object-fit: contain; }
+        .tn-header-logo { width: 80px; height: auto; display: block; margin: 0 auto 15px auto; }
         .vote-btn { background: #1a2a6c; color: white; border: none; padding: 15px 40px; border-radius: 30px; font-size: 18px; cursor: pointer; }
         .results { margin-top: 30px; text-align: left; }
         .bar-bg { background: #eee; height: 10px; border-radius: 5px; margin: 5px 0 15px 0; }
@@ -41,6 +42,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
+    <img src="/static/tn_logo.png" class="tn-header-logo" alt="TN Govt Logo">
         <h1>தமிழக சட்டமன்றத் தேர்தல் 2026 - கருத்துக் கணிப்பு</h1>
         <form action="/vote" method="post">
             <div class="party-grid">
