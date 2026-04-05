@@ -74,16 +74,15 @@ HTML_TEMPLATE = """
         <div class="disclaimer">
             <strong>பொறுப்புத் துறப்பு (Disclaimer):</strong> இது ஒரு தனிப்பட்ட நபரால் நடத்தப்படும் கருத்துக் கணிப்பு. இதற்கும் இந்திய தேர்தல் ஆணையத்திற்கும் அல்லது தமிழ்நாடு அரசுக்கும் எந்தத் தொடர்பும் இல்லை.
         </div>
-    </div>
-</body>
-</html>
-"""
-        </p>
-</body>
-</html>
-"""
+             </div>
+     </div>
+ </body>
+ </html>
+ """
 
-@app.route('/')
+ @app.route('/')
+def index():
+    @app.route('/')
 def index():
     df = pd.read_csv(DATA_FILE)
     counts = df['Party'].value_counts().to_dict()
