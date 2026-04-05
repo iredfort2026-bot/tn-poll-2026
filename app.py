@@ -18,7 +18,6 @@ PARTIES = [
     {'id': 'BJP', 'name': 'பாஜக', 'image': '/static/bjp.png'}
 ]
 
-# உங்கள் அழகான UI டிசைன்
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="ta">
@@ -44,7 +43,6 @@ HTML_TEMPLATE = """
     <div class="container">
         <div style="font-size: 50px;">🗳️</div>
         <h2 style="margin: 10px 0; font-size: 20px;">தமிழக சட்டமன்றத் தேர்தல் 2026 - கருத்துக் கணிப்பு</h2>
-        
         <form action="/vote" method="post">
             <div class="party-grid">
                 {% for party in parties %}
@@ -57,7 +55,6 @@ HTML_TEMPLATE = """
             </div>
             <button type="submit" class="vote-btn">வாக்களிக்கிறேன்</button>
         </form>
-
         <div class="results">
             <h3 style="border-bottom: 2px solid #1a2a6c; padding-bottom: 5px;">தற்போதைய நிலவரம்</h3>
             {% set total_votes = counts.values()|sum %}
@@ -70,40 +67,9 @@ HTML_TEMPLATE = """
                 </div>
             {% endfor %}
         </div>
-
         <div class="disclaimer">
             <strong>பொறுப்புத் துறப்பு (Disclaimer):</strong> இது ஒரு தனிப்பட்ட நபரால் நடத்தப்படும் கருத்துக் கணிப்பு. இதற்கும் இந்திய தேர்தல் ஆணையத்திற்கும் அல்லது தமிழ்நாடு அரசுக்கும் எந்தத் தொடர்பும் இல்லை.
         </div>
-             </div>
-     </div>
- </body>
- </html>
- """
-
- @app.route('/')
-def index():
-    @app.route('/')
-def index():
-    df = pd.read_csv(DATA_FILE)
-    counts = df['Party'].value_counts().to_dict()
-    return render_template_string(HTML_TEMPLATE, parties=PARTIES, counts=counts)
-
-@app.route('/vote', methods=['POST'])
-def vote():
-    if request.cookies.get('has_voted'):
-        return "ஏற்கனவே வாக்களித்துவிட்டீர்கள்! <a href='/'>திரும்பச் செல்ல</a>"
-    
-    party = request.form.get('selected_party')
-    df = pd.read_csv(DATA_FILE)
-    new_vote = pd.DataFrame([{'Party': party}])
-    df = pd.concat([df, new_vote], ignore_index=True)
-    df.to_csv(DATA_FILE, index=False)
-    
-    resp = make_response(redirect(url_for('index')))
-    resp.set_cookie('has_voted', 'true', max_age=30*24*60*60)
-    return resp
-
-if __name__ == '__main__':
-    # Render-க்கு மிக முக்கியமானது இந்த வரிகள்:
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', port=port)
+    </div>
+</body>
+</html>
