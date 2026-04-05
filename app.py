@@ -41,8 +41,9 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
+<div style="font-size: 50px; margin-bottom: 10px;">🗳️</div>
     <div class="container">
-    <img src="/static/tn_logo.png" class="tn-header-logo" alt="TN Govt Logo">
+    <div style="font-size: 50px; margin-bottom: 10px;">🗳️</div>
         <h1>தமிழக சட்டமன்றத் தேர்தல் 2026 - கருத்துக் கணிப்பு</h1>
         <form action="/vote" method="post">
             <div class="party-grid">
@@ -69,6 +70,10 @@ HTML_TEMPLATE = """
             {% endfor %}
         </div>
     </div>
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <p style="font-size: 12px; color: #777; text-align: center; padding-bottom: 20px;">
+            <strong>பொறுப்புத் துறப்பு (Disclaimer):</strong> இது ஒரு தனிப்பட்ட நபரால் நடத்தப்படும் கருத்துக் கணிப்பு. இதற்கும் இந்திய தேர்தல் ஆணையத்திற்கும் அல்லது தமிழ்நாடு அரசுக்கும் எந்தத் தொடர்பும் இல்லை. மக்களின் தற்போதைய மனநிலையை அறிய மட்டுமே இந்தத் தளம் உருவாக்கப்பட்டுள்ளது.
+        </p>
 </body>
 </html>
 """
