@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 # உங்கள் Google Web App URL (சரியானது)
-GSHEET_URL = "https://script.google.com/macros/s/AKfycby35JGXlrqo0ISfcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm60sciBC/exec"
+GSHEET_URL = "https://script.google.com/macros/s/AKfycbw35JGXlrqo0I5fcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm6OsciBC/exec"
 
 # டேட்டா ஃபைல் செட்டிங்ஸ்
 DATA_FILE = 'election_data.csv'
