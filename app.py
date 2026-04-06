@@ -95,7 +95,8 @@ def vote():
     # Google Sheet-க்கு அனுப்புதல்
     if party:
         try:
-            requests.post(GSHEET_URL, data={'party': party}, timeout=10)
+            # .post-ஐ இப்படி மாற்றுவது நல்லது
+            requests.post(GSHEET_URL, params={'party': party}, timeout=5)
         except:
             pass
 
