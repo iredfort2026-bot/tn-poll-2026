@@ -2,8 +2,12 @@ import os
 from flask import Flask, render_template_string, request, redirect, url_for, make_response
 import pandas as pd
 import requests
+
 app = Flask(__name__)
-GSHEET_URL = "https://script.google.com/macros/s/AKfycbw35JGXlrqo0I5fcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm6OsciBC/exec"
+
+# உங்கள் Google Web App URL (சரியானது)
+GSHEET_URL = "https://script.google.com/macros/s/AKfycby35JGXlrqo0ISfcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm60sciBC/exec"
+
 # டேட்டா ஃபைல் செட்டிங்ஸ்
 DATA_FILE = 'election_data.csv'
 if not os.path.exists(DATA_FILE):
@@ -36,14 +40,13 @@ HTML_TEMPLATE = """
         .results { margin-top: 30px; text-align: left; background: #fdfdfd; padding: 15px; border-radius: 10px; }
         .bar-bg { background: #eee; height: 10px; border-radius: 5px; margin: 5px 0 15px 0; overflow: hidden; }
         .bar-fill { background: linear-gradient(90deg, #1a2a6c, #b21f1f); height: 100%; border-radius: 5px; }
-        .disclaimer { font-size: 11px; color: #888; margin-top: 30px; line-height: 1.4; border-top: 1px solid #eee; padding-top: 15px; text-align: center; }
+        .disclaimer { font-size: 11px; color: #888; margin-top: 30px; line-height: 1.4; border-top: 1px solid #eee; padding-top: 15px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div style="font-size: 50px;">🗳️</div>
         <h2 style="margin: 10px 0; font-size: 20px;">தமிழக சட்டமன்றத் தேர்தல் 2026 - கருத்துக் கணிப்பு</h2>
-        
         <form action="/vote" method="post">
             <div class="party-grid">
                 {% for party in parties %}
@@ -56,7 +59,6 @@ HTML_TEMPLATE = """
             </div>
             <button type="submit" class="vote-btn">வாக்களிக்கிறேன்</button>
         </form>
-
         <div class="results">
             <h3 style="border-bottom: 2px solid #1a2a6c; padding-bottom: 5px;">தற்போதைய நிலவரம்</h3>
             {% set total_votes = counts.values()|sum %}
@@ -69,7 +71,6 @@ HTML_TEMPLATE = """
                 </div>
             {% endfor %}
         </div>
-
         <div class="disclaimer">
             <strong>பொறுப்புத் துறப்பு (Disclaimer):</strong> இது ஒரு தனிப்பட்ட நபரால் நடத்தப்படும் கருத்துக் கணிப்பு. இதற்கும் இந்திய தேர்தல் ஆணையத்திற்கும் அல்லது தமிழ்நாடு அரசுக்கும் எந்தத் தொடர்பும் இல்லை.
         </div>
@@ -91,15 +92,14 @@ def vote():
     
     party = request.form.get('selected_party')
     
-    # Google Sheet-க்கு அனுப்பும் பகுதி
+    # Google Sheet-க்கு அனுப்புதல்
     if party:
         try:
-            # இங்கே 'party' என்ற வார்த்தையைச் சரியாகக் கொடுக்க வேண்டும்
             requests.post(GSHEET_URL, data={'party': party}, timeout=10)
-        except Exception as e:
-            print(f"Error sending to Google Sheet: {e}")
+        except:
+            pass
 
-    # CSV பேக்கப்
+    # CSV-யில் சேமித்தல் (Backup)
     df = pd.read_csv(DATA_FILE)
     new_vote = pd.DataFrame([{'Party': party}])
     df = pd.concat([df, new_vote], ignore_index=True)
