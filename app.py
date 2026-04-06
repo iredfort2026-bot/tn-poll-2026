@@ -3,7 +3,7 @@ from flask import Flask, render_template_string, request, redirect, url_for, mak
 import pandas as pd
 
 app = Flask(__name__)
-GSHEET_URL = "https://script.google.com/macros/s/AKfycbxnMKhpdxKIzdVxfffnHThKEbg4GDn14fRE_jJdlAwtiXpTxc1b7GyuquSM7oGLmbBz/exec"
+GSHEET_URL = "https://script.google.com/macros/s/AKfycbw35JGXlrqo0I5fcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm6OsciBC/exec"
 # டேட்டா ஃபைல் செட்டிங்ஸ்
 DATA_FILE = 'election_data.csv'
 if not os.path.exists(DATA_FILE):
