@@ -1,7 +1,7 @@
 import os
-from flask import Flask, render_template_string, request, redirect, url_for, make_response, import requests
+from flask import Flask, render_template_string, request, redirect, url_for, make_response
 import pandas as pd
-
+import requests
 app = Flask(__name__)
 GSHEET_URL = "https://script.google.com/macros/s/AKfycbw35JGXlrqo0I5fcfQzpN_vbmfN9m44eLCaZz5PwDBvv5fH2h9r5Jy8f15Qm6OsciBC/exec"
 # டேட்டா ஃபைல் செட்டிங்ஸ்
@@ -90,6 +90,16 @@ def vote():
         return "ஏற்கனவே வாக்களித்துவிட்டீர்கள்! <a href='/'>திரும்பச் செல்ல</a>"
     
     party = request.form.get('selected_party')
+    
+    # Google Sheet-க்கு அனுப்பும் பகுதி
+    if party:
+        try:
+            # இங்கே 'party' என்ற வார்த்தையைச் சரியாகக் கொடுக்க வேண்டும்
+            requests.post(GSHEET_URL, data={'party': party}, timeout=10)
+        except Exception as e:
+            print(f"Error sending to Google Sheet: {e}")
+
+    # CSV பேக்கப்
     df = pd.read_csv(DATA_FILE)
     new_vote = pd.DataFrame([{'Party': party}])
     df = pd.concat([df, new_vote], ignore_index=True)
