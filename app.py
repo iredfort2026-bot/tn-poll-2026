@@ -1,9 +1,9 @@
 import os
-from flask import Flask, render_template_string, request, redirect, url_for, make_response
+from flask import Flask, render_template_string, request, redirect, url_for, make_response, import requests
 import pandas as pd
 
 app = Flask(__name__)
-
+GSHEET_URL = "https://script.google.com/macros/s/AKfycbz72fh8ylflQFaYdobgt2_wHC0pLq5KEbUX5hVpBcO09z0Wv9pMsBsOIALCA5sQ877s/exec"
 # டேட்டா ஃபைல் செட்டிங்ஸ்
 DATA_FILE = 'election_data.csv'
 if not os.path.exists(DATA_FILE):
