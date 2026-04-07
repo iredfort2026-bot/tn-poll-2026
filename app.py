@@ -91,10 +91,14 @@ HTML_TEMPLATE = """
         <strong>PROXKey</strong> டோக்கன்கள் எங்களிடம் கிடைக்கும்.
     </p>
     
-    <div style="display: flex; justify-content: center; gap: 15px; margin: 15px 0; align-items: center;">
-        <img src="https://www.certificate.digital/images/logo.png" alt="Capricorn" style="height: 30px;">
-        <img src="https://www.xtratrust.com/assets/images/logo.png" alt="XtraTrust" style="height: 30px;">
-        <span style="font-weight: bold; color: #555; font-size: 12px;">PROXKey Authorized</span>
+    <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0; align-items: center; flex-wrap: wrap;">
+        <img src="https://www.certificate.digital/assets/images/logo.png" alt="Capricorn" style="height: 35px; max-width: 150px; object-fit: contain;">
+        
+        <img src="https://www.xtratrust.com/assets/images/logo.png" alt="XtraTrust" style="height: 35px; max-width: 150px; object-fit: contain;">
+        
+        <div style="font-weight: bold; color: #2c3e50; font-size: 14px; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px; background: #fff;">
+            PROXKey Authorized
+        </div>
     </div>
 
     <a href="https://wa.me/919363035217?text=I%20need%20DSC%20Service%20from%20iRedfort" 
