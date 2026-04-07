@@ -45,8 +45,21 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <div style="font-size: 50px;">🗳️</div>
-        <h2 style="margin: 10px 0; font-size: 20px;">தமிழக சட்டமன்றத் தேர்தல் 2026 - கருத்துக் கணிப்பு</h2>
+        <div style="margin-bottom: 25px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px;">
+            <div style="font-size: 45px; margin-bottom: 10px;">🗳️</div>
+            <h1 style="color: #1a2a6c; font-size: 26px; margin: 0; letter-spacing: 1px;">iRedfort Election Forecast</h1>
+            <p style="color: #555; font-size: 14px; margin: 5px 0 0 0; font-weight: bold;">
+                Powered by iRedfort E-Solutions Pvt Ltd
+            </p>
+            <p style="color: #888; font-size: 11px; margin-top: 2px;">
+                An ISO Certified MSME Unit (UDYAM-TN-37-0021061)
+            </p>
+        </div>
+
+        <h2 style="margin: 15px 0; font-size: 19px; color: #333; line-height: 1.4;">
+            தமிழக சட்டமன்றத் தேர்தல் 2026 <br> 
+            <span style="color: #b21f1f;">நேரடி கருத்துக் கணிப்பு</span>
+        </h2>
         <form action="/vote" method="post">
             <div class="party-grid">
                 {% for party in parties %}
