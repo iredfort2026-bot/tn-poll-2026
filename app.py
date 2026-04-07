@@ -71,6 +71,31 @@ HTML_TEMPLATE = """
                 </div>
             {% endfor %}
         </div>
+        <div style="margin-top: 30px; padding: 20px; border-top: 2px dashed #ddd; background: #fff9e6; border-radius: 15px; text-align: center;">
+    <h2 style="color: #1a2a6c; font-size: 20px; margin-bottom: 5px;">iRedfort E-Solutions Pvt Ltd</h2>
+    <h3 style="color: #d35400; font-size: 16px; margin-top: 0;">🛡️ அங்கீகரிக்கப்பட்ட டிஜிட்டல் சிக்னேச்சர் (DSC) மையம்</h3>
+    
+    <p style="font-size: 13px; color: #555; line-height: 1.5; margin: 15px 0;">
+        நாங்கள் <strong>Capricorn</strong> மற்றும் <strong>XtraTrust</strong> நிறுவனங்களின் அதிகாரப்பூர்வ பார்ட்னர். <br>
+        Class 3 DSC, இ-டெண்டர், மற்றும் வருமான வரித் தாக்கல் செய்யத் தேவையான டிஜிட்டல் கையொப்பங்கள் மற்றும் 
+        <strong>PROXKey</strong> டோக்கன்கள் எங்களிடம் கிடைக்கும்.
+    </p>
+    
+    <div style="display: flex; justify-content: center; gap: 15px; margin: 15px 0; align-items: center;">
+        <img src="https://www.certificate.digital/images/logo.png" alt="Capricorn" style="height: 30px;">
+        <img src="https://www.xtratrust.com/assets/images/logo.png" alt="XtraTrust" style="height: 30px;">
+        <span style="font-weight: bold; color: #555; font-size: 12px;">PROXKey Authorized</span>
+    </div>
+
+    <a href="https://wa.me/919942245217?text=I%20need%20DSC%20Service%20from%20iRedfort" 
+       style="display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        💬 தொடர்புக்கு: 99422 45217
+    </a>
+
+    <p style="font-size: 11px; color: #888; margin-top: 10px;">
+        அலுவலகம்: ஜவஹர் தெரு, கடையநல்லூர் [cite: 32, 74]
+    </p>
+</div>
         <div class="disclaimer">
             <strong>பொறுப்புத் துறப்பு (Disclaimer):</strong> இது ஒரு தனிப்பட்ட நபரால் நடத்தப்படும் கருத்துக் கணிப்பு. இதற்கும் இந்திய தேர்தல் ஆணையத்திற்கும் அல்லது தமிழ்நாடு அரசுக்கும் எந்தத் தொடர்பும் இல்லை.
         </div>
