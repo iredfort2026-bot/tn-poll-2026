@@ -87,7 +87,7 @@ HTML_TEMPLATE = """
         <span style="font-weight: bold; color: #555; font-size: 12px;">PROXKey Authorized</span>
     </div>
 
-    <a href="https://wa.me/919942245217?text=I%20need%20DSC%20Service%20from%20iRedfort" 
+    <a href="https://wa.me/919363035217?text=I%20need%20DSC%20Service%20from%20iRedfort" 
        style="display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         💬 தொடர்புக்கு: 93630 35217
     </a>
