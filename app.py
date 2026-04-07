@@ -91,12 +91,15 @@ HTML_TEMPLATE = """
         <strong>PROXKey</strong> டோக்கன்கள் எங்களிடம் கிடைக்கும்.
     </p>
     
-    <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0; align-items: center; flex-wrap: wrap;">
-        <img src="https://www.certificate.digital/assets/images/logo.png" alt="Capricorn" style="height: 35px; max-width: 150px; object-fit: contain;">
+    <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; align-items: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; background: white; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">
+            <div style="width: 20px; height: 20px; background: #27ae60; border-radius: 50%; margin-right: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">C</div>
+            <span style="font-weight: bold; color: #333; font-family: sans-serif;">Capricorn</span>
+        </div>
         
-        <img src="https://www.xtratrust.com/assets/images/logo.png" alt="XtraTrust" style="height: 35px; max-width: 150px; object-fit: contain;">
+        <img src="https://www.xtratrust.com/assets/images/logo.png" alt="XtraTrust" style="height: 35px; max-width: 130px; object-fit: contain;">
         
-        <div style="font-weight: bold; color: #2c3e50; font-size: 14px; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px; background: #fff;">
+        <div style="font-weight: bold; color: #1a2a6c; font-size: 13px; border: 1px solid #1a2a6c; padding: 5px 12px; border-radius: 5px; background: #f0f4f8;">
             PROXKey Authorized
         </div>
     </div>
