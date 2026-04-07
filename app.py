@@ -51,9 +51,6 @@ HTML_TEMPLATE = """
             <p style="color: #555; font-size: 14px; margin: 5px 0 0 0; font-weight: bold;">
                 Powered by iRedfort E-Solutions Pvt Ltd
             </p>
-            <p style="color: #888; font-size: 11px; margin-top: 2px;">
-                An ISO Certified MSME Unit (UDYAM-TN-37-0021061)
-            </p>
         </div>
 
         <h2 style="margin: 15px 0; font-size: 19px; color: #333; line-height: 1.4;">
